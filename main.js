@@ -26,6 +26,23 @@ const pAequorFactor = (specimenNum, dna) => {
         }while(this.dna[dnaBaseIndex] === newBase)
         this.dna[dnaBaseIndex] = newBase;
         return this.dna;
+    },compareDNA(object){
+      const selfDna = this.dna;
+      const foreignDna = object.dna;
+      let similarity = 0;
+
+      console.log(selfDna)
+      console.log(foreignDna)
+      for(let i =0;i<selfDna.length;i++){
+          if(selfDna[i] === foreignDna[i]){
+            similarity++;
+          }
+      }
+
+      similarity /= 15;
+      similarity *= 100;
+      console.log(`Specimen #1 and specimen #2 have ${similarity.toFixed()}% DNA in common`)
+      
     }
   }
 }
