@@ -63,6 +63,26 @@ const pAequorFactor = (specimenNum, dna) => {
 
       return isSurvival;
 
+    }, 
+    complementStrand(){
+      const complementStrand = [];
+      for(const base of this.dna){
+        switch(base){
+          case 'A':
+            complementStrand.push('T');
+          break;
+          case 'T':
+            complementStrand.push('A');
+          break;
+          case 'C':
+            complementStrand.push('G');
+          break;
+          case 'G':
+            complementStrand.push('C');
+          break;
+        }
+      }
+      return complementStrand;
     }
   }
 }
