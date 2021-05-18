@@ -42,6 +42,27 @@ const pAequorFactor = (specimenNum, dna) => {
       similarity *= 100;
       console.log(`Specimen #1 and specimen #2 have ${similarity.toFixed()}% DNA in common`)
       
+    },
+    willLikelySurvive(){
+      let survivalIndex = 0;
+      for(const base of this.dna){
+        switch(base){
+          case 'C':
+            survivalIndex++;
+          break;
+          case 'G':
+            survivalIndex++;
+          break;
+        }
+      }
+
+      survivalIndex /= this.dna.length;
+      survivalIndex *= 100;
+
+      isSurvival = survivalIndex > 60
+
+      return isSurvival;
+
     }
   }
 }
