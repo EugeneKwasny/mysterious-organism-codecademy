@@ -66,3 +66,11 @@ const pAequorFactor = (specimenNum, dna) => {
     }
   }
 }
+
+const pAequorArray = [];
+
+for(let i=30;i>0;i--){
+   pAequorArray.push(pAequorFactor(i, mockUpStrand()));
+}
+
+console.log(pAequorArray);
