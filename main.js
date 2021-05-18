@@ -26,13 +26,12 @@ const pAequorFactor = (specimenNum, dna) => {
         }while(this.dna[dnaBaseIndex] === newBase)
         this.dna[dnaBaseIndex] = newBase;
         return this.dna;
-    },compareDNA(object){
+    },
+    compareDNA(object){
       const selfDna = this.dna;
       const foreignDna = object.dna;
       let similarity = 0;
 
-      console.log(selfDna)
-      console.log(foreignDna)
       for(let i =0;i<selfDna.length;i++){
           if(selfDna[i] === foreignDna[i]){
             similarity++;
@@ -46,5 +45,3 @@ const pAequorFactor = (specimenNum, dna) => {
     }
   }
 }
-
-
