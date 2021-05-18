@@ -13,7 +13,12 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-
+const pAequorFactor = (number, array) => {
+  return {
+    specimenNum: number,
+    dna: array 
+  }
+}
 
 
 
