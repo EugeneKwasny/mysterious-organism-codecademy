@@ -13,15 +13,21 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-const pAequorFactor = (number, array) => {
+const pAequorFactor = (specimenNum, dna) => {
   return {
-    specimenNum: number,
-    dna: array 
+    specimenNum,
+    dna,
+    mutate(){
+        
+        let dnaBaseIndex = Math.floor(Math.random() * dna.length)
+        let newBase = '';
+        do{
+          newBase = returnRandBase();
+        }while(this.dna[dnaBaseIndex] === newBase)
+        this.dna[dnaBaseIndex] = newBase;
+        return this.dna;
+    }
   }
 }
-
-
-
-
 
 
